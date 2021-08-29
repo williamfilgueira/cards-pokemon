@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 6rem;
+    flex-direction: column;
+    background-image: url("./imagens/bakcground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+input{
+    display: none;
+}
+
+.title img{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    perspective: 900px;
+}
+
+.item{
+    border-radius: 0.4rem;
+    overflow: hidden;
+    cursor: pointer;
+    width: 30%;
+    transition: .5s all ease ;
+    transform:rotateX(45deg) scale(0.7);
+    box-shadow: 1px 20px 50px rgb(211, 208, 209);
+}
+
+.card1, .card2, .card3, .card4{
+    width: 305px;
+    height: 420px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    border-radius: 15px;
+    background-image: url("./imagens/pokemon-card.jpg");
+}
+
+.item:hover{
+    cursor: pointer;
+    transform: rotateY(0deg) scale(1);
+    transition: .5s all ease;
+    z-index: 400;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.16);
+}
+
+#obl:checked~.container>.card1{
+    transform: rotateY(180deg) scaleX(-1);
+    background-image: url("./imagens/charizard-removebg-preview.png");
+    background-color: #1E2E67;
+    
+}
+
+#ra:checked~.container>.card2{
+    transform: rotateY(180deg) scaleX(-1);
+    background-image: url("./imagens/gost-removebg-preview.png");
+    background-color: #1E2E67;
+    
+}
+#slicer:checked~.container>.card3{
+    transform: rotateY(180deg) scaleX(-1);
+    background-image: url("./imagens/lucario-removebg-preview.png");
+    background-color: #1E2E67;
+    
+}
+#pass:checked~.container>.card4{
+    transform: rotateY(180deg) scaleX(-1);
+    background-image: url("./imagens/passarim-removebg-preview.png");
+    background-color: #1E2E67;
+    
+}
+
+label{
+    display: block;
+    width:405px;
+    height: 500px;
+
+}
